@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MineSweeper" Height="600" Width="650" ContentRendered="Window_ContentRendered" >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+        <StackPanel Orientation="Vertical">
+            <Button HorizontalAlignment="Stretch" Grid.Row="0" Name="resetButton" Content="Reset" Click="ResetButton"/>
+            <TextBlock Text="Minesweeper" HorizontalAlignment="Center" />
+            <ComboBox Grid.Row="0" HorizontalAlignment="Right" SelectionChanged="SelectionChanged">
+                <ComboBoxItem Name="Beginner">Beginner</ComboBoxItem>
+            <ComboBoxItem Name="Intermediate">Intermediate</ComboBoxItem>
+            <ComboBoxItem Name="Advanced">Advanced</ComboBoxItem>
+            </ComboBox>
+         
+        </StackPanel>
+        <Border Grid.Row="1" BorderBrush="Black" BorderThickness="5">
+
+            <Grid  Name="gameArea" Width="650"  Height ="500" Margin="0" HorizontalAlignment="Stretch">
+        
+        
+        
+                </Grid>
+           </Border>
+      </Grid>
+</Window>
